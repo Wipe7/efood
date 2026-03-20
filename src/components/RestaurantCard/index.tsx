@@ -25,7 +25,10 @@ const RestaurantCard = ({
   return (
     <S.Card>
       <S.CardImage src={image} alt={title} />
-      {destacado && <S.DestaqueBadge>Destaque da semana</S.DestaqueBadge>}
+      <S.BadgesRow>
+        {destacado && <S.DestaqueBadge>Destaque da semana</S.DestaqueBadge>}
+        <S.CategoryBadge style={{ marginLeft: destacado ? 0 : 'auto' }}>{category}</S.CategoryBadge>
+      </S.BadgesRow>
       <S.CardBody>
         <S.CardHeader>
           <S.CardTitle>{title}</S.CardTitle>
@@ -34,10 +37,9 @@ const RestaurantCard = ({
             <img src="/assets/star.svg" alt="estrela" />
           </S.Rating>
         </S.CardHeader>
-        <S.CardCategory>{category}</S.CardCategory>
         <S.CardDescription>{description}</S.CardDescription>
         <S.CardButton onClick={() => navigate(`/perfil/${id}`)}>
-          Saiba mais
+          Saiba Mais
         </S.CardButton>
       </S.CardBody>
     </S.Card>

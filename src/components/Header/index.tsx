@@ -8,7 +8,7 @@ type HeaderProps = {
 const Header = ({ isHomePage = false }: HeaderProps) => {
   return (
     <S.HeaderContainer isHomePage={isHomePage}>
-      <S.HeaderContent>
+      <S.HeaderContent isHomePage={isHomePage}>
         {!isHomePage && (
           <Link to="/">
             <S.BackLink>Restaurantes</S.BackLink>

@@ -4,7 +4,6 @@ import { colors } from '../../styles/colors'
 export const Card = styled.div`
   background-color: ${colors.white};
   border: 1px solid ${colors.salmon};
-  border-radius: 8px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -17,16 +16,30 @@ export const CardImage = styled.img`
   object-fit: cover;
 `
 
-export const DestaqueBadge = styled.span`
+export const BadgesRow = styled.div`
   position: absolute;
   top: 16px;
-  left: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+`
+
+export const DestaqueBadge = styled.span`
   background-color: ${colors.salmon};
   color: ${colors.white};
   font-size: 12px;
   font-weight: 700;
   padding: 4px 8px;
-  border-radius: 4px;
+`
+
+export const CategoryBadge = styled.span`
+  background-color: ${colors.salmon};
+  color: ${colors.white};
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
 `
 
 export const CardBody = styled.div`
@@ -40,7 +53,7 @@ export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `
 
 export const CardTitle = styled.h3`
@@ -59,22 +72,16 @@ export const Rating = styled.div`
     font-weight: 700;
     color: ${colors.gray};
   }
-
-  img {
-    width: 21px;
-    height: 21px;
-  }
 `
 
-export const CardCategory = styled.p`
-  font-size: 12px;
-  color: ${colors.gray};
-  margin-bottom: 8px;
+export const StarIcon = styled.span`
+  font-size: 18px;
+  color: #F9B912;
 `
 
 export const CardDescription = styled.p`
   font-size: 14px;
-  color: ${colors.gray};
+  color: ${colors.salmon};
   line-height: 1.6;
   flex: 1;
   margin-bottom: 16px;
@@ -88,7 +95,6 @@ export const CardButton = styled.button`
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 4px;
   width: 100%;
   transition: background-color 0.2s;
 
