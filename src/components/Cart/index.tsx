@@ -62,8 +62,8 @@ const Cart = () => {
       })
 
       const data = await res.json()
-      dispatch(setOrderResponse({ orderId: data.orderId || data.id || '---', message: data.message || 'Pedido realizado com sucesso!' }))
       dispatch(clearCart())
+      dispatch(setOrderResponse({ orderId: data.orderId || data.id || '---', message: data.message || 'Pedido realizado com sucesso!' }))
     } catch {
       alert('Erro ao realizar pedido. Tente novamente.')
     } finally {

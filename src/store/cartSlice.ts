@@ -39,6 +39,7 @@ const cartSlice = createSlice({
     closeCart(state) {
       state.isOpen = false
       state.step = 'cart'
+      state.orderResponse = null
     },
     setStep(state, action: PayloadAction<CheckoutStep>) {
       state.step = action.payload
@@ -49,8 +50,6 @@ const cartSlice = createSlice({
     },
     clearCart(state) {
       state.items = []
-      state.step = 'cart'
-      state.orderResponse = null
     },
   },
 })
