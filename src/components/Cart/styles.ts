@@ -99,9 +99,82 @@ export const CheckoutButton = styled.button`
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+  margin-bottom: 8px;
   transition: background-color 0.2s;
 
   &:hover {
     background-color: #f0f0f0;
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`
+
+export const BackButton = styled.button`
+  background: none;
+  border: none;
+  color: ${colors.white};
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  padding: 4px 0;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
+
+/* Formulários */
+export const FormTitle = styled.h3`
+  color: ${colors.white};
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+`
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  flex: 1;
+`
+
+export const FormRow = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+`
+
+export const Label = styled.label`
+  color: ${colors.white};
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+`
+
+export const Input = styled.input`
+  padding: 8px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid ${colors.salmon};
+  }
+`
+
+export const InputSmall = styled(Input)`
+  width: 80px;
+`
+
+/* Confirmação */
+export const ConfirmationText = styled.p`
+  color: ${colors.white};
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 `
