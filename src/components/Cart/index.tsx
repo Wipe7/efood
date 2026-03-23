@@ -1,17 +1,22 @@
-import { useCart } from '../../contexts/CartContext'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { removeItem, closeCart } from '../../store/cartSlice'
 import * as S from './styles'
 
 const Cart = () => {
-  const { items, isOpen, closeCart, removeItem, total } = useCart()
+  const dispatch = useAppDispatch()
+  const { items, isOpen } = useAppSelector((state) => state.cart)
+  const total = items.reduce((acc, i) => acc + i.preco * i.quantidade, 0)
 
   if (!isOpen) return null
 
   return (
     <>
-      <S.Overlay onClick={closeCart} />
+      <S.Overlay onClick={() => dispatch(closeCart())} />
       <S.Sidebar>
         {items.length === 0 ? (
-          <S.EmptyMessage>O carrinho está vazio, adicione pelo menos um produto para continuar com seu pedido.</S.EmptyMessage>
+          <S.EmptyMessage>
+            O carrinho está vazio, adicione pelo menos um produto para continuar com seu pedido.
+          </S.EmptyMessage>
         ) : (
           <>
             {items.map((item) => (
@@ -23,7 +28,7 @@ const Cart = () => {
                     {item.quantidade}x — R$ {(item.preco * item.quantidade).toFixed(2).replace('.', ',')}
                   </S.ItemPrice>
                 </S.ItemInfo>
-                <S.RemoveButton onClick={() => removeItem(item.id)}>
+                <S.RemoveButton onClick={() => dispatch(removeItem(item.id))}>
                   Remover
                 </S.RemoveButton>
               </S.CartItem>

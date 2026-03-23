@@ -1,5 +1,6 @@
 import { Prato } from '../../types'
-import { useCart } from '../../contexts/CartContext'
+import { useAppDispatch } from '../../store/hooks'
+import { addItem } from '../../store/cartSlice'
 import * as S from './styles'
 
 type ModalProps = {
@@ -8,10 +9,10 @@ type ModalProps = {
 }
 
 const Modal = ({ prato, onClose }: ModalProps) => {
-  const { addItem } = useCart()
+  const dispatch = useAppDispatch()
 
   const handleAdd = () => {
-    addItem(prato)
+    dispatch(addItem(prato))
     onClose()
   }
 
@@ -27,9 +28,7 @@ const Modal = ({ prato, onClose }: ModalProps) => {
           <S.ModalPrice>
             Valor: R$ {prato.preco.toFixed(2).replace('.', ',')}
           </S.ModalPrice>
-          <S.AddButton onClick={handleAdd}>
-            Adicionar ao carrinho
-          </S.AddButton>
+          <S.AddButton onClick={handleAdd}>Adicionar ao carrinho</S.AddButton>
         </S.ModalContent>
       </S.ModalBox>
     </S.Overlay>
