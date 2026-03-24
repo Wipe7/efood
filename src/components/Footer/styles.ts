@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { colors } from '../../styles/colors'
 
 export const FooterContainer = styled.footer`
-  background-color: ${colors.cream};
+  background-color: #FFEBD9;
   padding: 40px 0;
 `
 
