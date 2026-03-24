@@ -87,6 +87,7 @@ export const CardDescription = styled.p`
   line-height: 22px;
   margin-bottom: 16px;
   color: ${colors.gray};
+  flex: 1;
 `
 
 export const CardButton = styled.button`
