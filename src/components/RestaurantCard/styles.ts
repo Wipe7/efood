@@ -2,46 +2,43 @@ import styled from 'styled-components'
 import { colors } from '../../styles/colors'
 
 export const Card = styled.div`
-  background-color: #FFEBD9;
-  overflow: hidden;
+  background-color: ${colors.white};
+  color: ${colors.salmon};
   position: relative;
+  border: 1px solid ${colors.salmon};
   display: flex;
   flex-direction: column;
-  width: 320px;
-  height: 338px;
 `
 
 export const CardImage = styled.img`
-  width: 304px;
-  height: 167px;
+  width: 100%;
+  height: 217px;
   object-fit: cover;
-  margin: 0 auto;
   display: block;
 `
 
 export const BadgesRow = styled.div`
   position: absolute;
   top: 16px;
-  left: 8px;
-  right: 8px;
+  right: 16px;
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
 `
 
 export const DestaqueBadge = styled.span`
   background-color: ${colors.salmon};
-  color: ${colors.white};
+  color: ${colors.cream};
   font-size: 12px;
   font-weight: 700;
-  padding: 4px 8px;
+  padding: 6px 4px;
 `
 
 export const CategoryBadge = styled.span`
   background-color: ${colors.salmon};
-  color: ${colors.white};
+  color: ${colors.cream};
   font-size: 12px;
   font-weight: 700;
-  padding: 4px 8px;
+  padding: 6px 4px;
 `
 
 export const CardBody = styled.div`
@@ -55,11 +52,13 @@ export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 16px;
 `
 
 export const CardTitle = styled.h3`
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: ${colors.gray};
 `
@@ -68,48 +67,38 @@ export const Rating = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
-  span {
-    font-size: 14px;
-    font-weight: 700;
-    color: ${colors.gray};
-  }
+  font-weight: bold;
+  font-size: 18px;
+  color: ${colors.gray};
 
   img {
-    width: 14px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
   }
 `
 
 export const StarIcon = styled.span`
-  font-size: 14px;
+  font-size: 18px;
   color: #F9B912;
 `
 
 export const CardDescription = styled.p`
   font-size: 14px;
-  font-weight: 400;
-  color: ${colors.gray};
   line-height: 22px;
-  flex: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  margin-bottom: 16px;
+  color: ${colors.gray};
 `
 
 export const CardButton = styled.button`
   background-color: ${colors.salmon};
-  color: ${colors.white};
-  border: none;
-  height: 24px;
+  color: ${colors.cream};
+  border: 1px solid ${colors.salmon};
+  padding: 4px 6px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 304px;
-  margin: 0 auto;
-  display: block;
-  transition: background-color 0.2s;
+  width: 100%;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: #d45f5f;

@@ -6,20 +6,15 @@ type HeaderContainerProps = {
 }
 
 export const HeaderContainer = styled.header<HeaderContainerProps>`
-  background-color: ${colors.salmon};
-  height: ${({ isHomePage }) => (isHomePage ? '384px' : 'auto')};
-  padding: ${({ isHomePage }) => (isHomePage ? '0' : '24px 0')};
+  background-color: ${colors.cream};
+  background-image: url('/assets/hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
-
-  ${({ isHomePage }) =>
-    isHomePage &&
-    `
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1440');
-    background-size: cover;
-    background-position: center;
-  `}
+  height: ${({ isHomePage }) => (isHomePage ? '360px' : 'auto')};
+  padding: ${({ isHomePage }) => (isHomePage ? '0' : '24px 0')};
 `
 
 export const HeaderContent = styled.div<HeaderContainerProps>`
@@ -28,35 +23,36 @@ export const HeaderContent = styled.div<HeaderContainerProps>`
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ isHomePage }) => (isHomePage ? 'column' : 'row')};
   align-items: center;
-  gap: ${({ isHomePage }) => (isHomePage ? '40px' : '16px')};
+  justify-content: ${({ isHomePage }) => (isHomePage ? 'center' : 'space-between')};
+  gap: ${({ isHomePage }) => (isHomePage ? '40px' : '0')};
 `
 
 export const Logo = styled.h1`
   font-size: 32px;
   font-style: italic;
   font-weight: 900;
-  color: ${colors.white};
-  border: 2px solid ${colors.white};
+  color: ${colors.salmon};
+  border: 2px solid ${colors.salmon};
   padding: 4px 16px;
   line-height: 1.2;
 `
 
-export const Tagline = styled.p`
+export const Tagline = styled.h2`
   font-size: 36px;
   font-weight: 900;
-  color: ${colors.white};
+  color: ${colors.salmon};
   text-align: center;
-  line-height: 1.3;
+  line-height: 42px;
+  max-width: 540px;
 `
 
 export const BackLink = styled.span`
-  color: ${colors.white};
+  color: ${colors.salmon};
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
   cursor: pointer;
-  align-self: flex-start;
 
   &:hover {
     text-decoration: underline;
