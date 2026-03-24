@@ -43,7 +43,7 @@ export const CategoryBadge = styled.span`
 `
 
 export const CardBody = styled.div`
-  padding: 8px;
+  padding: 8px 8px 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -91,7 +91,7 @@ export const CardButton = styled.button`
   background-color: ${colors.salmon};
   color: ${colors.white};
   border: none;
-  padding: 4px 0;
+  padding: 8px 0;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;

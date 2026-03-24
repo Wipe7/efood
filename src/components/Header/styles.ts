@@ -6,8 +6,17 @@ type HeaderContainerProps = {
 }
 
 export const HeaderContainer = styled.header<HeaderContainerProps>`
-  background-color: ${({ isHomePage }) => (isHomePage ? colors.cream : colors.salmon)};
+  background-color: ${colors.salmon};
   padding: ${({ isHomePage }) => (isHomePage ? '40px 0 80px' : '24px 0')};
+
+  ${({ isHomePage }) =>
+    isHomePage &&
+    `
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1440');
+    background-size: cover;
+    background-position: center;
+  `}
 `
 
 export const HeaderContent = styled.div<HeaderContainerProps>`
@@ -24,8 +33,8 @@ export const Logo = styled.h1`
   font-size: 32px;
   font-style: italic;
   font-weight: 900;
-  color: ${colors.salmon};
-  border: 2px solid ${colors.salmon};
+  color: ${colors.white};
+  border: 2px solid ${colors.white};
   padding: 4px 16px;
   line-height: 1.2;
 `
@@ -33,7 +42,7 @@ export const Logo = styled.h1`
 export const Tagline = styled.p`
   font-size: 36px;
   font-weight: 900;
-  color: ${colors.salmon};
+  color: ${colors.white};
   text-align: center;
   line-height: 1.3;
 `

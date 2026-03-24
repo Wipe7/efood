@@ -28,5 +28,5 @@ export const SectionTitle = styled.h2`
 export const RestaurantsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px 80px;
+  gap: 48px 32px;
 `

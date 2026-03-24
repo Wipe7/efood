@@ -22,6 +22,8 @@ export const Logo = styled.h2`
   font-style: italic;
   font-weight: 900;
   color: ${colors.white};
+  border: 2px solid ${colors.white};
+  padding: 4px 12px;
 `
 
 export const SocialLinks = styled.div`
