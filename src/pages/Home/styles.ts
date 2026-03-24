@@ -9,13 +9,13 @@ export const PageWrapper = styled.div`
 
 export const Main = styled.main`
   flex: 1;
-  padding: 56px 0;
+  padding: 56px 0 120px;
 `
 
 export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
 `
 
 export const SectionTitle = styled.h2`
@@ -27,6 +27,7 @@ export const SectionTitle = styled.h2`
 
 export const RestaurantsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 320px);
   gap: 48px 32px;
+  justify-content: center;
 `

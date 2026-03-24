@@ -3,12 +3,14 @@ import { colors } from '../../styles/colors'
 
 export const FooterContainer = styled.footer`
   background-color: ${colors.salmon};
-  padding: 40px 0;
-  margin-top: auto;
+  height: 298px;
+  display: flex;
+  align-items: center;
 `
 
 export const FooterContent = styled.div`
   max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;

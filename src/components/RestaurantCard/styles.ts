@@ -2,28 +2,30 @@ import styled from 'styled-components'
 import { colors } from '../../styles/colors'
 
 export const Card = styled.div`
-  background-color: ${colors.white};
-  border: 1px solid ${colors.salmon};
+  background-color: #FFEBD9;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 320px;
+  height: 338px;
 `
 
 export const CardImage = styled.img`
-  width: 100%;
-  height: 217px;
+  width: 304px;
+  height: 167px;
   object-fit: cover;
+  margin: 0 auto;
+  display: block;
 `
 
 export const BadgesRow = styled.div`
   position: absolute;
   top: 16px;
-  left: 0;
-  right: 0;
+  left: 8px;
+  right: 8px;
   display: flex;
   justify-content: space-between;
-  padding: 0 8px;
 `
 
 export const DestaqueBadge = styled.span`
@@ -43,7 +45,7 @@ export const CategoryBadge = styled.span`
 `
 
 export const CardBody = styled.div`
-  padding: 8px 8px 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -53,11 +55,11 @@ export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 `
 
 export const CardTitle = styled.h3`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: ${colors.gray};
 `
@@ -68,34 +70,45 @@ export const Rating = styled.div`
   gap: 8px;
 
   span {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: ${colors.gray};
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
   }
 `
 
 export const StarIcon = styled.span`
-  font-size: 18px;
+  font-size: 14px;
   color: #F9B912;
 `
 
 export const CardDescription = styled.p`
   font-size: 14px;
-  color: ${colors.salmon};
-  line-height: 1.6;
+  font-weight: 400;
+  color: ${colors.gray};
+  line-height: 22px;
   flex: 1;
-  margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `
 
 export const CardButton = styled.button`
   background-color: ${colors.salmon};
   color: ${colors.white};
   border: none;
-  padding: 8px 0;
+  height: 24px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
+  width: 304px;
+  margin: 0 auto;
+  display: block;
   transition: background-color 0.2s;
 
   &:hover {

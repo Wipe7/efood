@@ -7,7 +7,10 @@ type HeaderContainerProps = {
 
 export const HeaderContainer = styled.header<HeaderContainerProps>`
   background-color: ${colors.salmon};
-  padding: ${({ isHomePage }) => (isHomePage ? '40px 0 80px' : '24px 0')};
+  height: ${({ isHomePage }) => (isHomePage ? '384px' : 'auto')};
+  padding: ${({ isHomePage }) => (isHomePage ? '0' : '24px 0')};
+  display: flex;
+  align-items: center;
 
   ${({ isHomePage }) =>
     isHomePage &&
@@ -21,6 +24,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
 
 export const HeaderContent = styled.div<HeaderContainerProps>`
   max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;

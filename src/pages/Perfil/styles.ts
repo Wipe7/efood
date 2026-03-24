@@ -53,27 +53,31 @@ export const Main = styled.main`
 export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
 `
 
 export const MenuGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 320px);
   gap: 32px;
+  justify-content: center;
 `
 
 export const DishCard = styled.div`
   background-color: ${colors.salmon};
-  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  width: 320px;
+  height: 338px;
 `
 
 export const DishImage = styled.img`
-  width: 100%;
+  width: 304px;
   height: 167px;
   object-fit: cover;
+  margin: 0 auto;
+  display: block;
 `
 
 export const DishBody = styled.div`
@@ -84,7 +88,7 @@ export const DishBody = styled.div`
 `
 
 export const DishName = styled.h3`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: ${colors.white};
   margin-bottom: 8px;
@@ -92,22 +96,27 @@ export const DishName = styled.h3`
 
 export const DishDescription = styled.p`
   font-size: 14px;
+  font-weight: 400;
   color: ${colors.white};
-  line-height: 1.6;
+  line-height: 22px;
   flex: 1;
-  margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `
 
 export const DishButton = styled.button`
   background-color: ${colors.white};
   color: ${colors.salmon};
   border: none;
-  padding: 4px 0;
+  height: 24px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 4px;
-  width: 100%;
+  width: 304px;
+  margin: 0 auto;
+  display: block;
   transition: background-color 0.2s;
 
   &:hover {
