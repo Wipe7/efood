@@ -34,7 +34,7 @@ const RestaurantCard = ({
           <S.CardTitle>{title}</S.CardTitle>
           <S.Rating>
             <span>{avaliacao.toFixed(1)}</span>
-            <img src="/assets/star.svg" alt="estrela" />
+            <img src="/assets/estrela.png" alt="estrela" />
           </S.Rating>
         </S.CardHeader>
         <S.CardDescription>{description}</S.CardDescription>

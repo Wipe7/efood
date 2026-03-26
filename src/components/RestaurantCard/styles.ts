@@ -60,7 +60,7 @@ export const CardHeader = styled.div`
 export const CardTitle = styled.h3`
   font-size: 18px;
   font-weight: 700;
-  color: ${colors.gray};
+  color: ${colors.salmon};
 `
 
 export const Rating = styled.div`
@@ -69,7 +69,7 @@ export const Rating = styled.div`
   gap: 8px;
   font-weight: bold;
   font-size: 18px;
-  color: ${colors.gray};
+  color: ${colors.salmon};
 
   img {
     width: 21px;
@@ -86,14 +86,14 @@ export const CardDescription = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
-  color: ${colors.gray};
+  color: ${colors.salmon};
   flex: 1;
 `
 
 export const CardButton = styled.button`
   background-color: ${colors.salmon};
   color: ${colors.cream};
-  border: 1px solid ${colors.salmon};
+  border: none;
   padding: 4px 6px;
   font-size: 14px;
   font-weight: 700;

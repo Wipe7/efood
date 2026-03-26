@@ -16,13 +16,8 @@ export const FooterContent = styled.div`
   text-align: center;
 `
 
-export const Logo = styled.h2`
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 900;
-  color: ${colors.salmon};
-  border: 2px solid ${colors.salmon};
-  padding: 4px 12px;
+export const LogoImg = styled.img`
+  height: 40px;
   margin-bottom: 32px;
 `
 

@@ -8,9 +8,8 @@ type HeaderContainerProps = {
 export const HeaderContainer = styled.header<HeaderContainerProps>`
   background-color: ${colors.cream};
   background-image: url('/assets/hero-bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: auto;
   display: flex;
   align-items: center;
   height: ${({ isHomePage }) => (isHomePage ? '360px' : 'auto')};
@@ -29,14 +28,8 @@ export const HeaderContent = styled.div<HeaderContainerProps>`
   gap: ${({ isHomePage }) => (isHomePage ? '40px' : '0')};
 `
 
-export const Logo = styled.h1`
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 900;
-  color: ${colors.salmon};
-  border: 2px solid ${colors.salmon};
-  padding: 4px 16px;
-  line-height: 1.2;
+export const LogoImg = styled.img`
+  height: 40px;
 `
 
 export const Tagline = styled.h2`
@@ -57,4 +50,10 @@ export const BackLink = styled.span`
   &:hover {
     text-decoration: underline;
   }
+`
+
+export const CartInfo = styled.span`
+  color: ${colors.salmon};
+  font-size: 18px;
+  font-weight: 900;
 `
