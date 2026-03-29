@@ -104,7 +104,7 @@ export const DishDescription = styled.p`
 
 export const DishButton = styled.button`
   background-color: ${colors.cream};
-  color: ${colors.salmon};
+  color: #E66767;
   border: none;
   width: 218px;
   height: 24px;
