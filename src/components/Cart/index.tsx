@@ -96,9 +96,7 @@ const Cart = () => {
                         {item.quantidade}x — R$ {(item.preco * item.quantidade).toFixed(2).replace('.', ',')}
                       </S.ItemPrice>
                     </S.ItemInfo>
-                    <S.RemoveButton onClick={() => dispatch(removeItem(item.id))}>
-                      Remover
-                    </S.RemoveButton>
+                    <S.RemoveButton onClick={() => dispatch(removeItem(item.id))} title="Remover" />
                   </S.CartItem>
                 ))}
                 <S.Separator />

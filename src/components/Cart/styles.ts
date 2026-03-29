@@ -33,9 +33,12 @@ export const CartItem = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: ${colors.white};
-  padding: 8px;
+  background-color: #FFEBD9;
+  padding: 8px 8px 12px 8px;
   margin-bottom: 16px;
+  width: 344px;
+  min-height: 100px;
+  position: relative;
 `
 
 export const ItemImage = styled.img`
@@ -53,7 +56,7 @@ export const ItemName = styled.p`
   font-size: 18px;
   font-weight: 700;
   color: ${colors.salmon};
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `
 
 export const ItemPrice = styled.p`
@@ -62,13 +65,17 @@ export const ItemPrice = styled.p`
 `
 
 export const RemoveButton = styled.button`
-  background: none;
+  background-image: url('/assets/lixeira.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
-  align-self: flex-end;
-  color: ${colors.salmon};
-  font-size: 12px;
-  text-decoration: underline;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
   padding: 0;
 
   &:hover {

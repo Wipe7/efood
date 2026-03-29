@@ -41,7 +41,7 @@ const Perfil = () => {
                   <S.DishName>{prato.nome}</S.DishName>
                   <S.DishDescription>{prato.descricao}</S.DishDescription>
                   <S.DishButton onClick={() => setSelectedPrato(prato)}>
-                    Adicionar ao carrinho
+                    Adicionar ao carrinho | R$ {prato.preco.toFixed(2).replace('.', ',')}
                   </S.DishButton>
                 </S.DishBody>
               </S.DishCard>

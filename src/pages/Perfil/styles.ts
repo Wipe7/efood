@@ -106,14 +106,17 @@ export const DishButton = styled.button`
   background-color: ${colors.cream};
   color: ${colors.salmon};
   border: none;
-  padding: 4px 0;
+  width: 218px;
+  height: 24px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
+  text-align: center;
+  align-self: flex-start;
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #f0f0f0;
+    opacity: 0.9;
   }
 `

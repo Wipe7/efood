@@ -8,6 +8,8 @@ export const Card = styled.div`
   border: 1px solid ${colors.salmon};
   display: flex;
   flex-direction: column;
+  width: 472px;
+  height: 398px;
 `
 
 export const CardImage = styled.img`
@@ -94,11 +96,13 @@ export const CardButton = styled.button`
   background-color: ${colors.salmon};
   color: ${colors.cream};
   border: none;
-  padding: 4px 6px;
+  width: 82px;
+  height: 24px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
+  text-align: center;
   transition: all 0.3s ease;
 
   &:hover {
