@@ -98,19 +98,22 @@ export const TotalRow = styled.div`
 `
 
 export const CheckoutButton = styled.button`
-  background-color: ${colors.white};
-  color: ${colors.salmon};
+  background-color: #FFEBD9;
+  color: #E66767;
   border: none;
-  padding: 4px 0;
+  width: 344px;
+  height: 24px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
+  text-align: center;
+  line-height: 100%;
   margin-bottom: 8px;
-  transition: background-color 0.2s;
+  transition: opacity 0.2s;
 
   &:hover {
-    background-color: #f0f0f0;
+    opacity: 0.9;
   }
 
   &:disabled {
