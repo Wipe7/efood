@@ -168,6 +168,7 @@ export const Input = styled.input`
   border: none;
   font-size: 14px;
   width: 100%;
+  background-color: #FFEBD9;
 
   &:focus {
     outline: 2px solid ${colors.salmon};

@@ -172,7 +172,7 @@ const Cart = () => {
         {/* STEP 3 — PAGAMENTO */}
         {step === 'payment' && (
           <>
-            <S.FormTitle>Pagamento — Cartão de crédito</S.FormTitle>
+            <S.FormTitle>Pagamento — Valor a pagar R$ {total.toFixed(2).replace('.', ',')}</S.FormTitle>
             <S.FormGroup>
               <S.Label>Nome no cartão</S.Label>
               <S.Input
@@ -216,7 +216,7 @@ const Cart = () => {
               {loading ? 'Finalizando...' : 'Finalizar pagamento'}
             </S.CheckoutButton>
             <S.BackButton onClick={() => dispatch(setStep('delivery'))}>
-              Voltar para a entrega
+              Voltar para a edição do endereço
             </S.BackButton>
           </>
         )}
