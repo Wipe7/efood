@@ -19,16 +19,14 @@ const Modal = ({ prato, onClose }: ModalProps) => {
   return (
     <S.Overlay onClick={onClose}>
       <S.ModalBox onClick={(e) => e.stopPropagation()}>
-        <S.CloseButton onClick={onClose}>✕</S.CloseButton>
+        <S.CloseButton onClick={onClose} title="Fechar" />
         <S.ModalImage src={prato.foto} alt={prato.nome} />
         <S.ModalContent>
           <S.ModalTitle>{prato.nome}</S.ModalTitle>
           <S.ModalDescription>{prato.descricao}</S.ModalDescription>
-          {prato.porcao && <S.ModalPorcao>Serve: {prato.porcao}</S.ModalPorcao>}
-          <S.ModalPrice>
-            Valor: R$ {prato.preco.toFixed(2).replace('.', ',')}
-          </S.ModalPrice>
-          <S.AddButton onClick={handleAdd}>Adicionar ao carrinho</S.AddButton>
+          <S.AddButton onClick={handleAdd}>
+            Adicionar ao carrinho - R$ {prato.preco.toFixed(2).replace('.', ',')}
+          </S.AddButton>
         </S.ModalContent>
       </S.ModalBox>
     </S.Overlay>

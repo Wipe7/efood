@@ -13,8 +13,9 @@ export const Overlay = styled.div`
 
 export const ModalBox = styled.div`
   background-color: ${colors.salmon};
-  max-width: 1024px;
-  width: 90%;
+  width: 1024px;
+  max-width: 90%;
+  height: 344px;
   display: flex;
   gap: 24px;
   padding: 32px;
@@ -25,12 +26,14 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 8px;
   right: 8px;
-  background: none;
+  background-image: url('/assets/close.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
-  font-size: 20px;
-  color: ${colors.white};
-  line-height: 1;
 `
 
 export const ModalImage = styled.img`
@@ -44,47 +47,40 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 656px;
 `
 
 export const ModalTitle = styled.h2`
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
   color: ${colors.white};
   margin-bottom: 16px;
 `
 
 export const ModalDescription = styled.p`
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: ${colors.white};
-  line-height: 1.6;
-  margin-bottom: 16px;
-`
-
-export const ModalPorcao = styled.p`
-  font-size: 14px;
-  color: ${colors.white};
-  margin-bottom: 24px;
-`
-
-export const ModalPrice = styled.p`
-  font-size: 14px;
-  color: ${colors.white};
-  margin-bottom: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 22px;
+  flex: 1;
 `
 
 export const AddButton = styled.button`
-  background-color: ${colors.white};
-  color: ${colors.salmon};
+  background-color: #FFEBD9;
+  color: #E66767;
   border: none;
-  padding: 4px 0;
+  width: 218px;
+  height: 24px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
+  text-align: center;
   margin-top: auto;
-  transition: background-color 0.2s;
+  transition: opacity 0.2s;
 
   &:hover {
-    background-color: #f0f0f0;
+    opacity: 0.9;
   }
 `

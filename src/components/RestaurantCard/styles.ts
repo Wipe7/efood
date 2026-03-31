@@ -10,13 +10,15 @@ export const Card = styled.div`
   flex-direction: column;
   width: 472px;
   height: 398px;
+  overflow: hidden;
 `
 
 export const CardImage = styled.img`
-  width: 100%;
+  width: 472px;
   height: 217px;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
 `
 
 export const BadgesRow = styled.div`

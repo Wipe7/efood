@@ -74,11 +74,11 @@ export const DishCard = styled.div`
 `
 
 export const DishImage = styled.img`
-  width: 100%;
+  width: 304px;
   height: 167px;
   object-fit: cover;
   display: block;
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
 `
 
 export const DishBody = styled.div`
