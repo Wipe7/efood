@@ -32,9 +32,8 @@ export const HeaderContent = styled.div<HeaderContainerProps>`
 export const HeroSection = styled.div`
   background-image: url('/assets/hero-bg.png');
   width: 100%;
-  height: 360px;
+  height: 280px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -53,7 +52,6 @@ export const Tagline = styled.h2`
   text-align: center;
   line-height: 42px;
   max-width: 540px;
-  margin-top: 139px;
 `
 
 export const BackLink = styled.span`
